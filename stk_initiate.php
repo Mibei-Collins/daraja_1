@@ -5,13 +5,13 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'xcZqjmXZBgcsOwGzMM597hEtJGUwlw6J'; //Fill with your app Consumer Key
-  $consumerSecret = 'RyHG1PIxfjAwLnbH'; // Fill with your app Secret
+  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
+  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
-  $BusinesShortcode = '174379';
+  $BusinesShortcode = '6331806';
   $PartyA = '6331806';
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
   
@@ -25,13 +25,13 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'o8h/4dGS0BmT6A705OQoaTgyS4zpJxmYO2hOX7pxqK+TA/VvmBq8DKhiEx3NP6ul+NQUMQspDMRg9AhNWXf5KGs0CrKz5aYQdLuwyx8VpVDqqqgLqDTh+2dmyvShvJFzYrQfGokzqSYX9CH/ryyXbszSU+Vujd0rt92GVioUXQ7Q70iAxFWuEMnq+ArfDwLNaT8vSmIVctugHyvn86jhrQqTxzGU/fvuhDgMdlvFsh+Z0eChiSCEHhu3+NWHZPKZDIqZnWEpV1ynsZMdCXqbi48anXGV4Mpd1cQqVmqqskni4uhWqOobNWdZVNvVbXCjRCPIvfX8VH+d2kWy6uuO4A==';
+  $SecurityCredential = 'VSGMFhUmAKIp5Znyx7wTahvn7fyWiuhbKVB31Xt+n3vF23PjbId7gCiOPcTqAIOteNfGNpAM6SsHzLRfIIFs1uV13IClifFmXZjtcN7h0+aWdMD+Hkadblwo5xbokcmqPV6XTq4XhDV8wizcuqSJ678yz2T5IWFaITjWDgL5uFR2BWRWHuJBk3tcM0gyvRRXFI6Bi/BuNrdHQbNA258oUU5/NAdS/CicuyweArg9GdOk+jTnW/o4TUfHJG2tS1sYg3DuKNp/55x0t2Ww5us9qrlMJapMMlLiVB7k3qyPFgPla4u+jK9DLrPSyyjJNfS0ddRDMDP1VdOygK8bX3nu+g==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
  
 
   # callback url
