@@ -35,7 +35,9 @@ if(isset($_POST['submit'])){
  
 
   # callback url
-  $CallBackURL = 'https://morning-forest-72309.herokuapp.com/callback_url.php';  
+  $Results = 'https://morning-forest-72309.herokuapp.com/results.php';
+  
+  $QueueTime = 'https://morning-forest-72309.herokuapp.com/queuetime.php';
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -59,7 +61,8 @@ if(isset($_POST['submit'])){
     'Amount' => $Amount,
     'PartyA' => $PartyA,
     'PartyB' => $PartyB,
-    'CallBackURL' => $CallBackURL,
+    'QueueTime' => $QueueTime,
+    'Results' => $Results,
     'Occassion' => $Occassion,
     'Remarks' => $Remarks
   );
