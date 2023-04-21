@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'KfN6H6lkEaRQ0iZXH8Q2uQpNgayI+IvGh/t08gOqu861c8eqRXyPzrXjQawTBZK5766sHAtjbp1t40Xm8rBFsVdMuVTPXdMTC6BnSgdWLdnfxVp/a0JkuLtTA1kh5vAdLqNTcywc0jdPmOVvfofLX6o2nZpLlecZhS7hhbeUUjj6rPpwv75JVkoi8PQXyc97fIxh4iPR29yr7PaAI0l2Jz3Kv55zlBi4Sh4yxctBw2iLEMX230oyYRMsGzgw5yV/wRsmKWKSdlozlaJXzktuvPWMRnODnM2dFxeQ9bpUZejROijZh6ac0TZzwiikNujIVa3WRjjfZC+J9tVAfmrGPw==';
+  $SecurityCredential = 'o8h/4dGS0BmT6A705OQoaTgyS4zpJxmYO2hOX7pxqK+TA/VvmBq8DKhiEx3NP6ul+NQUMQspDMRg9AhNWXf5KGs0CrKz5aYQdLuwyx8VpVDqqqgLqDTh+2dmyvShvJFzYrQfGokzqSYX9CH/ryyXbszSU+Vujd0rt92GVioUXQ7Q70iAxFWuEMnq+ArfDwLNaT8vSmIVctugHyvn86jhrQqTxzGU/fvuhDgMdlvFsh+Z0eChiSCEHhu3+NWHZPKZDIqZnWEpV1ynsZMdCXqbi48anXGV4Mpd1cQqVmqqskni4uhWqOobNWdZVNvVbXCjRCPIvfX8VH+d2kWy6uuO4A==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
@@ -35,9 +35,9 @@ if(isset($_POST['submit'])){
  
 
   # callback url
-  $Results = 'https://morning-forest-72309.herokuapp.com/results.php';
+  $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
   
-  $QueueTime = 'https://morning-forest-72309.herokuapp.com/queuetime.php';
+  $QueueTime = 'https://evening-scrubland-40886.herokuapp.com/queuetime.php';
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
