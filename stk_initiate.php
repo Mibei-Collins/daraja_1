@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'C6CBUn/ULRbL5jrxNWCXVgxAV3g5vFk4NfurHtU0v80MhFjXoSmpVEcxI8XqJYueZvCNOXl8+lRZR5lp+c/k97vp10EcaiG2OUIg29/tOWSTDtAcNUU/H9+qw1Wf4wM5f0MyCGI+y4wpX+JHbZKGMkVB8uTePTUAfG6GhXKxyhRm/teS740eapaDgC5HtoVb87J0ZmXUsfRH+5+LA+tZZWyBIsnbsAKffjlGnvASTSsYtgr77lsz/c42bG1HBplBySyYjRZ0bRfYdFUBngwL008JR9n3oDO1soUKC4NNKI4bYKX/LOqFvPiUW+15v3RVh6u0uho5qhWV13QbxOf0eQ==';
+  $SecurityCredential = 'hEYZomVvP3oqzs7paw8Owow0RiaAFsLjx/bQwlq4POCzaUq0HD+6BDuBRlQc1td4tXgpGDw7V/uDMtYEqsJxdkeuJ/25JjqUZZfdrHIVxVl0M8RgmzUfFHmiYebyxKBX1JHLfZQfytudv+vlowAdCNfFTyLyr66qtQ2Am+KHXN6gHFmFNwSs1n6GvwBCZoUKjzcLDuZ87TeMJxzhr7dEqhd3nVqBHXgfcHENMC2h6EkDdp0LeXxgfbFhbR7/tHnwjOnpFTLeNxNkTkRkS+57HI2EsMj6YszoLvI5YweZzXnYAsOAMjqLMb3buO/MFD017iSE4vmmhLzjtsQ8qUYc+A==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
