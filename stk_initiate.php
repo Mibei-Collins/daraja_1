@@ -5,12 +5,12 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'xcZqjmXZBgcsOwGzMM597hEtJGUwlw6J'; //Fill with your app Consumer Key
-  $consumerSecret = 'RyHG1PIxfjAwLnbH'; // Fill with your app Secret
+  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
+  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'testapi';
+  $InitiatorName = 'COLLINS KIPKOSGEI';
   $BusinessShortcode = '8488534';
   $PartyA = '6331806';
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'hEYZomVvP3oqzs7paw8Owow0RiaAFsLjx/bQwlq4POCzaUq0HD+6BDuBRlQc1td4tXgpGDw7V/uDMtYEqsJxdkeuJ/25JjqUZZfdrHIVxVl0M8RgmzUfFHmiYebyxKBX1JHLfZQfytudv+vlowAdCNfFTyLyr66qtQ2Am+KHXN6gHFmFNwSs1n6GvwBCZoUKjzcLDuZ87TeMJxzhr7dEqhd3nVqBHXgfcHENMC2h6EkDdp0LeXxgfbFhbR7/tHnwjOnpFTLeNxNkTkRkS+57HI2EsMj6YszoLvI5YweZzXnYAsOAMjqLMb3buO/MFD017iSE4vmmhLzjtsQ8qUYc+A==';
+  $SecurityCredential = 'IIF6ml8JRBBSjkxOH4Y1pnnyaOpXFLVSHNtm+E0ckqkovuboLMRXPZ8vuIL/0dSUIupT7z54dfgf/xxPlwMkfq4JNtMAJhSzBBAnKVAOjEefMaX8lj/1wNKWFp5exNZC7ww43SS254Fv0Q0tu52cJwIQSyQdYZ37ikY04SFsZTUBlnKFGddU3bbJkdRm8y4Gr8+36LbzR6zf82Bj4MwRXwHR17M3ZT0FVM7kib+7NuC8TabuyXg2jEppUHeY40lJHyKsY2j3OBGGC7LzwQcrQRGBTndVaJMHB5zsgnGodEdqZDnImTwarVezeeCYXu3Ec14HfzZXHImOgM94taacFg==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
