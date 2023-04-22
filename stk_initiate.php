@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
   $InitiatorName = 'COLLINS KIPKOSGEI';
   $BusinessShortcode = '8488534';
   $PartyA = '6331806';
-  $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
+  
   
   
   $PartyB = $_POST['phone']; // This is your phone number, 
