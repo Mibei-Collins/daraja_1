@@ -31,8 +31,8 @@ if(isset($_POST['submit'])){
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
- 
+  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
@@ -49,7 +49,12 @@ if(isset($_POST['submit'])){
   $result = json_decode($result);
   $access_token = $result->access_token;  
   curl_close($curl);
+  $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
 
+  # initiating the transaction
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $initiate_url);
+  curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
   
 
   $curl_post_data = array(
