@@ -5,13 +5,13 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
-  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
+  $consumerKey = 'xcZqjmXZBgcsOwGzMM597hEtJGUwlw6J'; //Fill with your app Consumer Key
+  $consumerSecret = 'RyHG1PIxfjAwLnbH'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'COLLINS KIPKOSGEI';
-  $BusinesShortcode = '6331806';
+  $InitiatorName = 'testapi';
+ 
   $PartyA = '6331806';
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
   
@@ -25,19 +25,19 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'VSGMFhUmAKIp5Znyx7wTahvn7fyWiuhbKVB31Xt+n3vF23PjbId7gCiOPcTqAIOteNfGNpAM6SsHzLRfIIFs1uV13IClifFmXZjtcN7h0+aWdMD+Hkadblwo5xbokcmqPV6XTq4XhDV8wizcuqSJ678yz2T5IWFaITjWDgL5uFR2BWRWHuJBk3tcM0gyvRRXFI6Bi/BuNrdHQbNA258oUU5/NAdS/CicuyweArg9GdOk+jTnW/o4TUfHJG2tS1sYg3DuKNp/55x0t2Ww5us9qrlMJapMMlLiVB7k3qyPFgPla4u+jK9DLrPSyyjJNfS0ddRDMDP1VdOygK8bX3nu+g==';
+  $SecurityCredential = 'C6CBUn/ULRbL5jrxNWCXVgxAV3g5vFk4NfurHtU0v80MhFjXoSmpVEcxI8XqJYueZvCNOXl8+lRZR5lp+c/k97vp10EcaiG2OUIg29/tOWSTDtAcNUU/H9+qw1Wf4wM5f0MyCGI+y4wpX+JHbZKGMkVB8uTePTUAfG6GhXKxyhRm/teS740eapaDgC5HtoVb87J0ZmXUsfRH+5+LA+tZZWyBIsnbsAKffjlGnvASTSsYtgr77lsz/c42bG1HBplBySyYjRZ0bRfYdFUBngwL008JR9n3oDO1soUKC4NNKI4bYKX/LOqFvPiUW+15v3RVh6u0uho5qhWV13QbxOf0eQ==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
  
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
   
-  $QueueTime = 'https://evening-scrubland-40886.herokuapp.com/queuetime.php';
+  $QueueTime = 'https://evening-scrubland-40886.herokuapp.com/timeout.php';
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 
   $curl_post_data = array(
     //Fill in the request parameters with valid values
-    'BusinesShortcode' => $BusinesShortcode, 
+    
     'InitiatorName' => $InitiatorName,
     'SecurityCredential' => $SecurityCredential,
     'CommandID' => $CommandID,
