@@ -35,9 +35,9 @@ if(isset($_POST['submit'])){
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
-  $Results = 'https://mydomain.com/b2c/queue';
+  $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
   
-  $QueueTime = 'https://mydomain.com/b2c/result';
+  $QueueTime = 'https://evening-scrubland-40886.herokuapp.com/timeout.php';
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
@@ -66,10 +66,11 @@ if(isset($_POST['submit'])){
     'Amount' => $Amount,
     'PartyA' => $PartyA,
     'PartyB' => $PartyB,
-    'QueueTime' => $QueueTime,
-    'Results' => $Results,
-    'Occassion' => $Occassion,
-    'Remarks' => $Remarks
+    'Remarks' => $Remarks,
+    'QueueTimeOutURL' => $QueueTime,
+    'ResultURL' => $Results,
+    'Occassion' => $Occassion
+    
   );
 
   $data_string = json_encode($curl_post_data);
