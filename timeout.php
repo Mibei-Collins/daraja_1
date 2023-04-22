@@ -1,6 +1,6 @@
 <?php
 // set the timeout duration in seconds
-$timeout_duration = 30;
+$timeout_duration = 300;
 
 // get the start time
 $start_time = time();
