@@ -5,12 +5,12 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
-  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
+  $consumerKey = 'yGnHSOnG4fCsD7JkiiTzQqCZxUzJdOem'; //Fill with your app Consumer Key
+  $consumerSecret = '8GWT1qPFfcgSbVRG'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'COLLINS KIPKOSGEI';
+  $InitiatorName = 'testapi';
   
   $PartyA = '6331806';
   
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'd8sk5z9TJ6XvPvzva+6FeAFwxvhkuPQCOMo7XV0xFYuhiMKx820aSCxTmE96HMGBmn6qLf48HXjNwNF7lz8oQ60PdCyVEZwaBdDUopU730jKvsh4CleroWvSw4P0neZM5JKkrHP+Lg6uwBuVp/KGbB8fI8SAcmjf57WpojsneUJ03sn5eh6czokOWEUTx5Yi6F0NlJQwwI9y/AcVFw35lrs8pK8JGhdY22UBaSw4BNJMCppPpxv2xWUzzgfQHL5tXcKBV5QlUov3PogwHtGg4ghkX2cnMAEQqZ2y3i9wKBBPq8dGUjmchFQFw+4BN0RdN9q7dRYBIiVMK/K59venEg==';
+  $SecurityCredential = 'QuF+ybBq09+6DyP9YunwWoKKaVukElwUrSVB1y+uYilvZ293GXhF3Nu4TqtI8xqT+pTMaC8qU4qam4SvsBW1rEsbSKImLKI/y5hr9N5EBq+SVfhqikjuXpvjGV4AyEI1GXqdWfjtEOzjrB5/6Le8N/ClaIykqOBsBZnJFxjev+7x32w8lccKSoOLrhWpQ99uTsyuP2FoHSBSNoTLpxld5T1R1SJK9ff4fHx5fBPQw4BS2JG4s2xRgKz2E4AnmJFGIPPGqy91UxnZUPXRCSXs+KWBSC+mQ/4TY5G99r7L3AKdZ5PiMai4LyKmIompAdNWWDVaHwIVFPrQoxFYcDNTSg==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate';
-  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
