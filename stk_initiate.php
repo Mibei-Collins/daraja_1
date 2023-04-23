@@ -5,14 +5,14 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'yGnHSOnG4fCsD7JkiiTzQqCZxUzJdOem'; //Fill with your app Consumer Key
-  $consumerSecret = '8GWT1qPFfcgSbVRG'; // Fill with your app Secret
+  $consumerKey = '6u2l6BdioLH1kalyGrUWNXaS6qCCjUbV'; //Fill with your app Consumer Key
+  $consumerSecret = ' GGmKYfueo0wkBi8q'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'COLLINS KIPKOSGEI';
+  $InitiatorName = 'testapi';
   
-  $PartyA = '6331806';
+  $PartyA = '600991';
   
   
   
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'QuF+ybBq09+6DyP9YunwWoKKaVukElwUrSVB1y+uYilvZ293GXhF3Nu4TqtI8xqT+pTMaC8qU4qam4SvsBW1rEsbSKImLKI/y5hr9N5EBq+SVfhqikjuXpvjGV4AyEI1GXqdWfjtEOzjrB5/6Le8N/ClaIykqOBsBZnJFxjev+7x32w8lccKSoOLrhWpQ99uTsyuP2FoHSBSNoTLpxld5T1R1SJK9ff4fHx5fBPQw4BS2JG4s2xRgKz2E4AnmJFGIPPGqy91UxnZUPXRCSXs+KWBSC+mQ/4TY5G99r7L3AKdZ5PiMai4LyKmIompAdNWWDVaHwIVFPrQoxFYcDNTSg==';
+  $SecurityCredential = 'ce2h2xi1USQeySDmTd1D98b42DfLheP01Wa/vtcAn+c53m/0gWH/NKoONGuRRayh7af/BpuBudFRWfqrJtSRHESntpgy+tQgY1iaN5bhhCvxC4qE+gaiHhb2OyNOKUXXb72msRwXSv8gILZfZmN/Y290vtKlyfO7KV+XSis9uDkTRtuq2tJ9O1tphVVqNZrNF8rUYn376pPTHeOouJi6EhAXh5gWA0VaHtlQC9nAelm3ZzIDmcNoGObvknCgDEOCBkhGs68ED6B4VOlq5A1jYQdeq2AB2Je2bSOvStL3k6YRYPHBjo/xYYLD4ZM9RDKbdT6UDuAcd+EUmbrX73LT+g==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
