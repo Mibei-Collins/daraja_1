@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
   
-  $PartyA = '8488534';
+  $PartyA = '6331806';
   
   
   
@@ -51,10 +51,7 @@ if(isset($_POST['submit'])){
   curl_close($curl);
   $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
 
-  # initiating the transaction
-  $curl = curl_init();
-  curl_setopt($curl, CURLOPT_URL, $initiate_url);
-  curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
+ 
   
 
   $curl_post_data = array(
@@ -74,6 +71,10 @@ if(isset($_POST['submit'])){
   );
 
   $data_string = json_encode($curl_post_data);
+   # initiating the transaction
+   $curl = curl_init();
+   curl_setopt($curl, CURLOPT_URL, $initiate_url);
+   curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_POST, true);
   curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
