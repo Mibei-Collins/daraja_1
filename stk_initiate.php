@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'CM';
+  $InitiatorName = 'COLLINS KIPKOSGEI';
   
   $PartyA = '6331806';
   
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'eUbqoLZp2Zik9E478l6p9VkezyhpuYcw0dvegUXXZI4M9XWoeteVoA3UEcifl4kZQni7qC2C7Poy7WT7FjtxW/9HzkzfHelm3NRl3YFT/YLz4ZcjzWt7UujGeZLLsRrFW8/ybJ6KmZJ6kGLxFyzShaXk0BvkcdPqdfU3JaxmRHU5LYK+CFj4vIeyX8TclCHc5ioL/aeACoqVcIptvcoLGuX3sLuOI5UqoqK/7ll1ePGr1jWM9ltC9rZ+K3t1u7P/clmm2wwRWlhk/9nVhYqnkIMA5NdTGBLs/xjx14pkEDPGNho2kyjvArIhW46AsM6fNe3gpIb1yhh7Wp9An4ppgA==';
+  $SecurityCredential = 'fpXT/0qBgUxs1w6EqXnmnlox5q9+l7r7G63p5havbE8iaIfuwo2xQMudFwHxj0Euu5ddcKfr9hOKtTiSv3Wvt6gWRzlz80+r8XQbJDMmUtNqWqrUkg9O6gHYFkPOjrrZt93lReUq8epgQsxLlKBNcDn95060EUIZeG7/WMMkDfYvtcmsf9b1VX3szvgx1Z73jbPyhcTd3W1KsaGmpfAr0zx2nDLw2YqekEPdo3u9vL06+Yx19j8sGCSX4p7ZkctKD99mup2h2KZVZEO5Tb7vcwsPuIQIPZQgDAKNkHlR8PtCglhASwEpDZtU0kTTaJfAVYJ0O/E6LoyW2aqehG8FrA==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
