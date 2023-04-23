@@ -11,8 +11,8 @@ if(isset($_POST['submit'])){
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
-  $BusinessShortCode = '8488534';
-  $PartyA = '6331806';
+  $BusinessShortCode = '6331806';
+  $PartyA = '8488534';
   
   
   
