@@ -5,14 +5,14 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'xcZqjmXZBgcsOwGzMM597hEtJGUwlw6J'; //Fill with your app Consumer Key
-  $consumerSecret = 'RyHG1PIxfjAwLnbH'; // Fill with your app Secret
+  $consumerKey = 'yGnHSOnG4fCsD7JkiiTzQqCZxUzJdOem'; //Fill with your app Consumer Key
+  $consumerSecret = '8GWT1qPFfcgSbVRG'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'COLLINS KIPKOSGEI';
-  $BusinessShortcode = '8488534';
-  $PartyA = '6331806';
+  $InitiatorName = 'testapi';
+  
+  $PartyA = '600992';
   
   
   
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'Joc0yqYi6UqVzB7JJW0FzolZ9tFiay9BYPwUaUr5hRSJo0z9G2n8ge6SAk0fnLY88+roDTXIhyZmxtJDv7EBeAfC7DGod+WM1/PIc9q5GOtWovYFm+zv7QnAik700lFROCPUtGCojVw0socXLbx6LYEVRotEs0CMDduAzIINDu6KKmYg++um5p0zBduaUyX07dNZlm3z+R0YI0QALbcZQjpua8AE2uYeq3VQBxDDO5PARoB1lIUN+ACu+5fGs9yqGI+fBUIihvbqEle5OUHUu2etfu3Bfftc13oiTjxsqAXCd9UhsBWkQUUbHHrmFRIZBNmjUOSPCkjqaO7AIzFk5A==';
+  $SecurityCredential = 'jXtKRMQHfwj8hllH7/3hDwnAs3sOlK6j/WbedJ8JsO/e8W4OdFrs78iaMldMhOlf2lch/6mieQQ4GP8GEvvi8cWGvXk8/d635AlVLc0nCvPZSjHBQomS8d/NX36KtGZ5PKRRueJJV4PRFvmVfKGxmioO6w3iUM2ePMcEGr8XLz6P0UduT9+few4KKKpXhj1k5kpHZzrf76kHBt/dmYYp7CV3hBEVGgyYvptIgS0h+Zhn94SDB+Zae3XwmJs3+3FaJsKxAzKEwuJIQJg8OSy84HCLeqZg9+6eZs5A1pbMPEMU048CRdskzqOB9k2CEU0KvxET25DAA8OlsejySsEBgA==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 
   $curl_post_data = array(
     //Fill in the request parameters with valid values
-    'BusinessShortcode' => $BusinessShortcode,
+    
     'InitiatorName' => $InitiatorName,
     'SecurityCredential' => $SecurityCredential,
     'CommandID' => $CommandID,
