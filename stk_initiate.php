@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
   $BusinessShortCode = '6331806';
-  $PartyA = '8488534';
+  $PartyB = '8488534';
   
   
   
@@ -61,8 +61,8 @@ if(isset($_POST['submit'])){
     'SecurityCredential' => $SecurityCredential,
     'CommandID' => $CommandID,
     'Amount' => $Amount,
-    'PartyA' => $PartyA,
     'PartyB' => $PartyB,
+    'PartyA' => $PartyA,
     'Remarks' => $Remarks,
     'QueueTimeOutURL' => $QueueTime,
     'ResultURL' => $Results,
