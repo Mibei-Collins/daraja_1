@@ -10,9 +10,9 @@ if(isset($_POST['submit'])){
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'testapi';
+  $InitiatorName = 'COLLINS KIPKOSGEI';
   
-  $PartyA = '6331806';
+  $PartyA = '6325484';
   
   
   
