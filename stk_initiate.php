@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'testapi';
   
-  $PartyA = '600992';
+  $PartyA = '6331806';
   
   
   
