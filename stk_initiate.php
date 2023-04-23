@@ -5,13 +5,13 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
-  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
+  $consumerKey = '6u2l6BdioLH1kalyGrUWNXaS6qCCjUbV'; //Fill with your app Consumer Key
+  $consumerSecret = 'GGmKYfueo0wkBi8q'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
-  
+  $BusinessShortCode = '6331806';
   $PartyA = '6331806';
   
   
@@ -31,8 +31,8 @@ if(isset($_POST['submit'])){
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate';
-  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
 
   $curl_post_data = array(
     //Fill in the request parameters with valid values
-    
+    'BusinessShortcode' => $BusinessShortCode,
     'InitiatorName' => $InitiatorName,
     'SecurityCredential' => $SecurityCredential,
     'CommandID' => $CommandID,
