@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
     # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
