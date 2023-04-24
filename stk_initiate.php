@@ -11,8 +11,8 @@ if(isset($_POST['submit'])){
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
   $InitiatorName = 'COLLINS KIPKOSGEI';
-  $BusinessShortCode = '6331806';
-  $PartyB = '8488534';
+  
+  $PartyA = '6331806';
   
   
   
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'XAknZaZ3nEKQwFhrNdQAZI1J5t7Q9W5M4qrWl1BA7XPOTSde29mnXiB/rUXyY2Fe5kbp103EylzBtPJwIQ0KVEmdo7AwI0mbVfLbNpKpj1vTyCNTQUhn4wzEjM0/Ex3nCt36ZtpDDoDjQ+bMy7WfGjzWPyxxx7LjvoFYPPKmDRsZ5iZiqOBBzHoilJJG3i5/Qp/SOi18E7ysE5EPFDo2JgBTgazrTQprKCzTPf5ZYI88aDKyxlOVPK+Y3v1w4EiNzfYwBtSb4rGOiMuMqAwHijScj8haBpyXgiWGm9GMNZXeSEBKMNEqEDTNn30w3HnNkq88jNExRyjNNltYhxBNSA==';
+  $SecurityCredential = 'SeU9RKSbeM+s7IwlK1tblFLWhKTnYf9NoBrpppJmP3326jyRFHJEMTuEhgfsT1Ce+XuSEQeEuOPswXAR7LNiNEr5p2QaQQfwYmFVhU7fS5HvK3x4HLhDoNco38TO6wrGvM3dI7C48zwqX31416fpuWRCUA538YSB0LTrvcn/E7AdLkHed0p79k5WlL/OaPxGqagtaFiU3MTF5q3wvph62EY/11fVn/VRJkrnmBb5UCKqkcdzJB1dtxJMsSaZRbfpc1Vt+KMfPx7Cr6qys5Fb8twvVcKpDfA5LTAVVgHN4z0JAOpIXIoUEiPWQ7T4lOBcHKkPA3yp0FpRlZL3VVa48g==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
@@ -52,17 +52,19 @@ if(isset($_POST['submit'])){
   $stkheader = ['Content-Type:application/json','Authorization:Bearer '.$access_token];
 
  
-  
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_URL, $initiate_url);
+  curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
 
   $curl_post_data = array(
     //Fill in the request parameters with valid values
-    'BusinessShortcode' => $BusinessShortCode,
+   
     'InitiatorName' => $InitiatorName,
     'SecurityCredential' => $SecurityCredential,
     'CommandID' => $CommandID,
     'Amount' => $Amount,
-    'PartyB' => $PartyB,
     'PartyA' => $PartyA,
+    'PartyB' => $PartyB,
     'Remarks' => $Remarks,
     'QueueTimeOutURL' => $QueueTime,
     'ResultURL' => $Results,
@@ -72,9 +74,7 @@ if(isset($_POST['submit'])){
 
   $data_string = json_encode($curl_post_data);
    # initiating the transaction
-   $curl = curl_init();
-   curl_setopt($curl, CURLOPT_URL, $initiate_url);
-   curl_setopt($curl, CURLOPT_HTTPHEADER, $stkheader);
+  
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_POST, true);
   curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
