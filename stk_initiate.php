@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $InitiatorName = 'Student';
+  $InitiatorName = 'Mibei Collins';
   
   $PartyA = '6331806';
   
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'gzf5owb6vH5uM7k6R5yQU9O8P0YToRSUs9PTAcFL6ChTpMBKSqkGHu3TggFACTgcuMv1qTRx98DCr7pPYFJitPD5HTPmBveiGoXEmonEB2S70IQ0tIX4IjG/4KMkw3HPWB0XrkAy7v3yIeGirFV3hOsRgT6GbZkbBRwxeAgHKz3325n8Gru/6H0LViP7SKcYdX/9eZldkiDswseykRwHjpgnCIOR9PfW1jwWzj2SNSe+uTa8X/8CrmFG+DKt7CKu7dtgPGvOtIxHQwrrDGmTUabG9KxA1v/PDsVVIA45zuRoeFcOtvykHC0Seyyzpa5pHTTg/Doik/2Q7xrUWVtrGQ==';
+  $SecurityCredential = 'aSrmmpBgAroibA1Uh0KvZ5xKlTQXFiB7Xo0267T+dz+vqrjtCIF2fbE15Y2HQqelT7aZMCCSgvKym0kU4vDo0gLKDEHbL//2yVilzVGQwLiZCKMS8+AWH1HAVUare07mBXjlGHEX0ljZ+QdMOxbA5r3tuLa9FPVem46Wm9z7JEBVwU6hZtWazM4cCJ0YLrWS9SEchN+LCz3nhmimii272z2f3yv4CiDcosuqbccYl5KoDqLeSSgubHlwxfqJeCvRR00n0Z3to09SzDjoh6g2NMnEKHL46GvEFDUN145UBx+SWPJXXBE/Yw4D+blSf7mom8QCw2IdjZfwD80D3PNPKQ==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
