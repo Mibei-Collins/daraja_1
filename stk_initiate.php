@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'SeU9RKSbeM+s7IwlK1tblFLWhKTnYf9NoBrpppJmP3326jyRFHJEMTuEhgfsT1Ce+XuSEQeEuOPswXAR7LNiNEr5p2QaQQfwYmFVhU7fS5HvK3x4HLhDoNco38TO6wrGvM3dI7C48zwqX31416fpuWRCUA538YSB0LTrvcn/E7AdLkHed0p79k5WlL/OaPxGqagtaFiU3MTF5q3wvph62EY/11fVn/VRJkrnmBb5UCKqkcdzJB1dtxJMsSaZRbfpc1Vt+KMfPx7Cr6qys5Fb8twvVcKpDfA5LTAVVgHN4z0JAOpIXIoUEiPWQ7T4lOBcHKkPA3yp0FpRlZL3VVa48g==';
+  $SecurityCredential = 'Gsxw+CJVkpA7tqj4Ikh9zWAu/44/04p8VVSgZ7u0sL+7xWptYeDPUnNj6Y8SvbtFOa0rl9eIAc0kAguejtO0zY4hJK4ExBHvcFgIn8C6zVBiO7ykLqOZ2RMeE+0aSIoMrEXp5vP28H5enx0D5yLYOLGDvxOMNT4+ZSPXMpFYZpHAkQGwysnnT/XLta/zrZuuJAnBAVPMm3TitVg+S3dV9pPs++PMPBI51cPud1NNApcI3Ca/sqbEK641z/bYXL3f61MYofAo0LQ+mwX7MUsoa5WYkhc6ilCeYHSMbWha92k47Y88mWH7HwYcA+VnvR5xoJ1EPKudmSZa8LfnQvBZnQ==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
   $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
