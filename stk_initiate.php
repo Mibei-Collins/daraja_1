@@ -5,8 +5,8 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'fGdVMGO2Ecur8FTQbEoAZRNoA4lounSQ'; //Fill with your app Consumer Key
-  $consumerSecret = 'NVRWDukLSFUEXDE7'; // Fill with your app Secret
+  $consumerKey = '6u2l6BdioLH1kalyGrUWNXaS6qCCjUbV'; //Fill with your app Consumer Key
+  $consumerSecret = 'GGmKYfueo0wkBi8q'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
@@ -25,14 +25,14 @@ if(isset($_POST['submit'])){
   $CommandID = 'SalaryPayment';    
   
   # Security Credential
-  $SecurityCredential = 'UOcmZvdS0l5jzMnm1ft/pH7qwVj5tz5taV0MW0KU9dFpfTy3vPuesNgNe1ddWqHMPQ7+e/sFbg8TpY6rrMZwr0M2duGyJWoZ6ZCEv9UQg/9+sk9+yCRAzl9u9qfk2nh4CHEF7BIHAGLBEf+hngHAB0l5yg1BX+w+adS/wHOSLI+6YxNGtXkIkNFnBtZqGFnfUOSbDHYNVlsfG3P+RN88YoOfHtuHBmabiSHeh1BS0f0R7V4WLLhOVq4NWxpJc7TBC939/QovdW+OZitTYBecokygL6avDYh4dKYui7J8jCH1jq8qj/y/LGDESjMn7mPDGChomyHlpWgL0kz9WqGipw==';
+  $SecurityCredential = 'gzf5owb6vH5uM7k6R5yQU9O8P0YToRSUs9PTAcFL6ChTpMBKSqkGHu3TggFACTgcuMv1qTRx98DCr7pPYFJitPD5HTPmBveiGoXEmonEB2S70IQ0tIX4IjG/4KMkw3HPWB0XrkAy7v3yIeGirFV3hOsRgT6GbZkbBRwxeAgHKz3325n8Gru/6H0LViP7SKcYdX/9eZldkiDswseykRwHjpgnCIOR9PfW1jwWzj2SNSe+uTa8X/8CrmFG+DKt7CKu7dtgPGvOtIxHQwrrDGmTUabG9KxA1v/PDsVVIA45zuRoeFcOtvykHC0Seyyzpa5pHTTg/Doik/2Q7xrUWVtrGQ==';
 
   # header for access token
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://api.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
+  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/b2c/v1/paymentrequest';
 
   # callback url
   $Results = 'https://evening-scrubland-40886.herokuapp.com/results.php';
